@@ -1,10 +1,331 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: left;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #e0f7fa, #b0e0e6); /* Light blue gradient */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.card {
-	padding: 2em;
+header {
+    background: linear-gradient(to right, #64b5f6, #42a5f5); /* Stronger blue gradient */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    border-bottom-left-radius: 0.5rem; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 0.5rem; /* Rounded bottom-right corner */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.85rem;
+    font-weight: 600;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #b0e0e6; /* Lighter blue on hover */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+main .container {
+    max-width: 1200px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0d47a1; /* Deep blue for heading */
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+main a {
+    background-color: #42a5f5; /* Blue button */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem; /* Fully rounded corners */
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+main a:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+}
+
+#about {
+    background-color: #f0f4f8; /* Very light blue */
+    padding: 4rem 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Subtle top shadow */
+}
+
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#about h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#about .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+#about .grid-container p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#about img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#services {
+    background: linear-gradient(to bottom, #e0f7fa, #f0f4f8);
+    padding: 4rem 0;
+}
+
+#services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#services h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#services .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+#services .grid-container .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#services .grid-container .card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#services .grid-container .card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1565c0;
+    margin-bottom: 1rem;
+}
+
+#services .grid-container .card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#services .grid-container .card a {
+    color: #42a5f5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#services .grid-container .card a:hover {
+    color: #0d47a1;
+}
+
+#contact {
+    background-color: #f0f4f8;
+    padding: 4rem 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0d47a1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contact .form-container {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact form .mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+#contact form label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+#contact form input[type="text"]:focus,
+#contact form input[type="email"]:focus,
+#contact form textarea:focus {
+    outline: none;
+    border-color: #42a5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+#contact form textarea {
+    height: 10rem;
+    resize: vertical;
+}
+
+#contact form button {
+    background-color: #42a5f5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#contact form button:hover {
+    background-color: #1e88e5;
+}
+
+footer {
+    background-color: #1a237e;
+    color: white;
+    padding: 1rem 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+    #about .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    #services .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
