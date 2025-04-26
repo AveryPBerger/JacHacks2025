@@ -2,7 +2,6 @@ import postgres from "postgres";
 
 
 export interface ActionsTakenProps {
-    actionId: number,
     utilityId: number,
     timeTaken: Date,
 }
