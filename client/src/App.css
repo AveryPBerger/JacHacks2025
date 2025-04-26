@@ -58,14 +58,17 @@ header nav ul li a:hover {
 main {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
     padding: 2rem 1rem;
+    text-align: center; /* Ensures text alignment for child elements */
 }
 
 main .container {
-    max-width: 1200px;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers child elements horizontally */
+    justify-content: center; /* Centers child elements vertically */
 }
 
 main h2 {
@@ -89,6 +92,9 @@ main a {
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 0 auto; /* Centers the button horizontally */
+    text-align: center; /* Ensures text inside is centered */
 }
 
 main a:hover {
