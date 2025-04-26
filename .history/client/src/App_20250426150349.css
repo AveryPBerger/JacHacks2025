@@ -23,6 +23,9 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -294,8 +297,6 @@ footer .container {
     padding: 0 1rem;
 }
 
-
-
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -329,26 +330,19 @@ footer .container {
     }
 }
 
-@media (min-width: 768px)
+@media (min-width: 769px)
 {
-
-    header .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    header .flex {
+    header .container > div {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .navigation {
         display: flex;
+        margin-left: auto;
+        align-items: center;
         gap: 1.5rem;
-        margin-right: 30px;
     }
-    
 
 }
