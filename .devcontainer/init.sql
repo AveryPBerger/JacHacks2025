@@ -1,30 +1,20 @@
-DROP DATABASE IF EXISTS "TodoDB";
-CREATE DATABASE "TodoDB";
+DROP DATABASE IF EXISTS "WaterWaster";
+CREATE DATABASE "WaterWaster";
 
-\c TodoDB;
+DROP TABLE IF EXISTS utilities;
+CREATE TABLE utilities (
+  utilityId SERIAL,
+  name TEXT NOT NULL,
+  cost numeric NOT NULL,
+  waterCost numeric NOT NULL,
+  --roomId numeric,
+  description TEXT NOT NULL 
+)
 
-DROP TYPE IF EXISTS todo_status;
-CREATE TYPE todo_status AS ENUM ('incomplete', 'complete');
+DROP TABLE IF EXISTS actionsTaken;
+CREATE TABLE actionsTaken (
+  actionId SERIAL,
+  utilityId INTEGER REFERENCES utilities(utilityId) NOT NULL,
+  timeTaken TIMESTAMP NOT NULL
+)
 
-DROP TABLE IF EXISTS todos;
-CREATE TABLE todos (
-  id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT NOT NULL,
-  status todo_status NOT NULL DEFAULT 'incomplete',
-  due_at TIMESTAMP,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  completed_at TIMESTAMP,
-  edited_at TIMESTAMP
-);
-
-DROP TABLE IF EXISTS subtodos;
-CREATE TABLE subtodos (
-  id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  status todo_status NOT NULL DEFAULT 'incomplete',
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  completed_at TIMESTAMP,
-  edited_at TIMESTAMP,
-  todo_id INTEGER REFERENCES todos(id) ON DELETE CASCADE
-);
