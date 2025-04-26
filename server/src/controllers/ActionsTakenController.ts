@@ -17,7 +17,7 @@ export default class ActionsTakenController{
     registerRoutes(router: Router) {
         // Any routes that include a `:id` parameter should be registered last.
         router.get("/ActionsTaken/", this.getActionsTaken);
-        router.post("/ActionsTaken/:id", this);
+        router.post("/ActionsTaken/:id", this.createTodo);
     }
 
 
