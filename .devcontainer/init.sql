@@ -14,11 +14,8 @@ CREATE TABLE utilities (
 DROP TABLE IF EXISTS actionsTaken;
 CREATE TABLE actionsTaken (
   actionId SERIAL,
-  utilityId INTEGER,
-  name TEXT,
-  cost numeric,
-  waterCost numeric,
-  --roomId numeric,
-  description TEXT
+  utilityId INTEGER REFERENCES utilities(utilityId)
+  --TIME TAKEN?
+
 )
 
