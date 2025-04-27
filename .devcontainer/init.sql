@@ -9,14 +9,14 @@ CREATE TABLE utilities (
   waterCost numeric NOT NULL,
   --roomId numeric,
   description TEXT NOT NULL 
-)
+);
 
 DROP TABLE IF EXISTS actionsTaken;
 CREATE TABLE actionsTaken (
   actionId SERIAL,
   utilityId INTEGER REFERENCES utilities(utilityId) NOT NULL,
   timeTaken TIMESTAMP NOT NULL
-)
+);
 
 
 INSERT INTO utilities(name, cost, waterCost, description) VALUES

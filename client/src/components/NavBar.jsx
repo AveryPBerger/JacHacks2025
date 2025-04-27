@@ -5,25 +5,19 @@ import React from "react";
 function NavBar() {
 	return (
 		<nav className="nav">
-			<ul>
-				<li>
-					<strong>Assignment 3 - AB</strong>
-				</li>
-			</ul>
+	       
+            
+            
+            <ul className="navigation">
+                <li>
+                     <Link to="/">Home</Link> 
+                </li>
+                <li>
+                    <Link to="/Game">Game</Link>
+                </li>
+            </ul>
+            {/* Implement rest of the Links to your routes for the navigation bar.*/}
 
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
-				</li>
-				<li>
-					<Link to="/game">Game</Link>
-				</li>
-				<li>
-					<Link to="/summary">Summary</Link>
-				</li>
-				
-				{/* Implement rest of the Links to your routes for the navigation bar.*/}
-			</ul>
 		</nav>
 	);
 }

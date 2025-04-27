@@ -8,7 +8,7 @@ import { HttpResponse, makeHttpRequest } from "./tests/client";
  */
 
 const sql = postgres({
-	database: "TodoDB",
+	database: "WaterWaster",
 });
 
 const server = new Server({

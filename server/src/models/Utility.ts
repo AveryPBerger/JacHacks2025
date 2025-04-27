@@ -20,7 +20,7 @@ export default class Utility {
 
 		const [row] = await connection<UtilityProps[]>`
 			SELECT * FROM
-			Utility WHERE id = ${id}
+			utilities WHERE utilityId = ${id}
 		`;
 
 		await connection.release();

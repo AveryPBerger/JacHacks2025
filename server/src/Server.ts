@@ -9,6 +9,8 @@ import Response, { StatusCode } from "./router/Response";
 import UtilityController from "./controllers/UtilityControler";
 import ActionsTakenController from "./controllers/ActionsTakenController";
 
+import path from "path";
+
 export interface ServerOptions {
 	host: string;
 	port: number;
@@ -55,6 +57,18 @@ export default class Server {
 			});
 		});
 	}
+
+	// Method to load init.sql file
+	private loadInitSql = async () => {
+		try {
+			const initSql = await fs.readFile("../.devcontainer/init.sql", "utf-8"); // Change path to your init.sql file
+			await this.sql.unsafe(initSql);  // Execute the SQL commands from the file
+			console.log("Database initialized with init.sql.");
+		} catch (error) {
+			console.error("Error loading init.sql:", error);
+			this.stop();
+		}
+	};
 
 	handleRequest = async (req: IncomingMessage, res: ServerResponse) => {
 		console.log(`>>> ${req.method} ${req.url}`);
@@ -121,6 +135,10 @@ export default class Server {
 	};
 
 	start = async () => {
+		// Load init.sql before starting the server
+		//await this.initializeDatabase();
+		//await this.loadInitSql();
+
 		this.server.on("request", this.handleRequest);
 		await this.server.listen(this.port);
 		console.log(`Server running at http://${this.host}:${this.port}/`);
@@ -130,5 +148,26 @@ export default class Server {
 		await this.sql.end();
 		this.server.close();
 		console.log(`Server stopped.`);
+	};
+
+	private initializeDatabase = async () => {
+		try {
+			// Connect to the default 'postgres' database
+			const defaultSql = postgres({ database: "postgres" });
+	
+			// Load and execute the init.sql script
+			const filePath = path.resolve(__dirname, "../../.devcontainer/init.sql");
+			const initSql = await fs.readFile(filePath, "utf-8");
+			await defaultSql.unsafe(initSql);
+	
+			console.log("Database initialized with init.sql.");
+	
+			// Close the default connection and reconnect to the 'WaterWaster' database
+			await defaultSql.end();
+			this.sql = postgres({ database: "WaterWaster" });
+		} catch (error) {
+			console.error("Error initializing database:", error);
+			this.stop();
+		}
 	};
 }
