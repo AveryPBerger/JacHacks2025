@@ -49,7 +49,27 @@
             padding: 0.5rem 1rem;
             border-radius: 0.5rem;
             cursor: pointer;
+            /* transition: background-color 0.3s ease; */
+            background-color: transparent;
+        }
+
+        #hoverButton4 {
+            position: absolute;
+            bottom: 10px; /* Position the button at the bottom of the image */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for the button's width */
+            background-color: transparent; /* Semi-transparent background */
+            color: transparent; /* Makes the text transparent */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
             transition: background-color 0.3s ease;
+            bottom: 75px;
+        }
+
+        #hoverButton4:hover {
+            background-color: transparent; /* Darker background on hover */
         }
     </style>
 </head>
@@ -64,12 +84,14 @@
             <button class="change-img-button" id="hoverButton2">Hover to Show Image 2</button>
             <button class="change-img-button" id="hoverButton3">Hover to Show Image 3</button>
         </div>
+        <button class="change-img-button" id="hoverButton4">Hover to Show Image 3</button>
     </div>
 
     <script>
         const button1 = document.getElementById('hoverButton1');
         const button2 = document.getElementById('hoverButton2');
         const button3 = document.getElementById('hoverButton3');
+        const button4 = document.getElementById('hoverButton4');
         const displayImage = document.getElementById('displayImage');
 
         button1.addEventListener('mouseover', () => {
@@ -93,6 +115,14 @@
         });
 
         button3.addEventListener('mouseout', () => {
+            displayImage.src = 'src/assets/bathroom/Washroom.png';
+        });
+
+        button4.addEventListener('mouseover', () => {
+            displayImage.src = 'src/assets/bathroom/BathtubAnimation.png';
+        });
+
+        button4.addEventListener('mouseout', () => {
             displayImage.src = 'src/assets/bathroom/Washroom.png';
         });
 
