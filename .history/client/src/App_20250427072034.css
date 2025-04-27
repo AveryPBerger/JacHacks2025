@@ -15,10 +15,6 @@ body {
     to { transform: translateY(0); }
 }
 
-.info-image{
-    justify-content: center;
-    
-}
 
 .hero-fade-in {
     opacity: 0;
@@ -161,7 +157,7 @@ main a:hover {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
- 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #services {

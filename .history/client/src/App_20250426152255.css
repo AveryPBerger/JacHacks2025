@@ -10,30 +10,6 @@ body {
     flex-direction: column;
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-
-.info-image{
-    justify-content: center;
-    
-}
-
-.hero-fade-in {
-    opacity: 0;
-    animation: fadeIn 1.2s ease-in-out forwards;
-}
-
-.Game-info{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-}
-
-
-
 header {
     background: linear-gradient(to right, #64b5f6, #42a5f5); /* Stronger blue gradient */
     color: white;
@@ -41,13 +17,15 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     border-bottom-left-radius: 0.5rem; /* Rounded bottom-left corner */
     border-bottom-right-radius: 0.5rem; /* Rounded bottom-right corner */
-    animation: slideDown 1s ease-out;
 }
 
 header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    display: flex;
+    
+    align-items: center;
 }
 
 header h1 {
@@ -80,17 +58,14 @@ header nav ul li a:hover {
 main {
     flex: 1;
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
+    justify-content: center;
+    align-items: center;
     padding: 2rem 1rem;
-    text-align: center; /* Ensures text alignment for child elements */
 }
 
 main .container {
-    display: flex;
-    flex-direction: column; /* Stacks elements vertically */
-    align-items: center; /* Centers child elements horizontally */
-    justify-content: center; /* Centers child elements vertically */
+    max-width: 1200px;
+    text-align: center;
 }
 
 main h2 {
@@ -114,9 +89,6 @@ main a {
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    display: inline-block;
-    margin: 0 auto; /* Centers the button horizontally */
-    text-align: center; /* Ensures text inside is centered */
 }
 
 main a:hover {
@@ -124,7 +96,7 @@ main a:hover {
 }
 
 #about {
-    background-color: rgb(206, 235, 206); /* Very light blue */
+    background-color: #f0f4f8; /* Very light blue */
     padding: 4rem 0;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -161,11 +133,11 @@ main a:hover {
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
- 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #services {
-    background: linear-gradient(to bottom, #cfdfe2, #f0f4f8);
+    background: linear-gradient(to bottom, #e0f7fa, #f0f4f8);
     padding: 4rem 0;
 }
 
@@ -194,16 +166,12 @@ main a:hover {
     border-radius: 0.5rem;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.transition-all {
-    transition: all 0.3s ease;
-  }
-
 #services .grid-container .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 #services .grid-container .card h3 {
@@ -329,21 +297,6 @@ footer .container {
     padding: 0 1rem;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-  
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
-}
-  
-  /* Animation delay classes */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -379,52 +332,18 @@ footer .container {
 
 @media (min-width: 769px)
 {
-
-    header .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    header .flex {
+    header .container > div {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
-    
+
     .navigation {
         display: flex;
-        gap: 1.5rem;
-        margin-right: 30px;
+        margin-left: auto;
+        gap: 2rem; 
     }
+
     
 
-}
-/* body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-} */
-
-.change-img-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #007BFF;
-}
-
-.change-img-button:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Slight hover effect for visibility */
-    color: #0056b3;
-}
-
-#displayImage {
-    margin-top: 20px;
-    max-width: 80%;
-    height: auto;
 }
