@@ -29,11 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const hoverButton1 = document.getElementById('hoverButton1');
     const hoverButton2 = document.getElementById('hoverButton2');
     const hoverButton3 = document.getElementById('hoverButton3');
+    const hoverButton4 = document.getElementById('hoverButton4');
     
     const images = [
-        "../assets/bedroom/DoorAnimation.png",
-        "../assets/bedroom/ComputerAnimation.png",
-        "../assets/bedroom/Bedanimation.png"
+        "../assets/hallway/Archway1Animation.png",
+        "../assets/hallway/Door1Animation.png",
+        "../assets/hallway/Door2Animation.png",
+        "../assets/hallway/Archway2Animation.png"
     ];
     
     // Information to display in popup for each button
@@ -62,6 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
     hoverButton3.addEventListener('mouseover', () => {
         displayImage.src = images[2];
     });
+
+    hoverButton3.addEventListener('mouseover', () => {
+        displayImage.src = images[3];
+    });
     
     // Reset image on mouseout
     [hoverButton1, hoverButton2, hoverButton3].forEach(button => {
@@ -72,15 +78,19 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Click functionality to open popup with relevant info
     hoverButton1.addEventListener('click', () => {
-        window.location.href = "./bathroom.html";
+        window.location.href = "./kitchen.html";
     });
     
     hoverButton2.addEventListener('click', () => {
-        openPopupWindow(buttonInfo[1]);
+        window.location.href = "./bathroom.html";
     });
     
     hoverButton3.addEventListener('click', () => {
-        openPopupWindow(buttonInfo[2]);
+        window.location.href = "./bedroom.html";
+    });
+
+    hoverButton4.addEventListener('click', () => {
+        window.location.href = "./livingroom.html";
     });
 });
 

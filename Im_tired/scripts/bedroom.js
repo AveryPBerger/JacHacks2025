@@ -1,6 +1,6 @@
 "use strict";
 
-import { default as Action } from "./utility.js";
+//import { default as Action } from "./utility.js";
 import { default as Player } from "./player.js";
 import openPopupWindow from "./popupwindow.js";
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Click functionality to open popup with relevant info
     hoverButton1.addEventListener('click', () => {
-        window.location.href = "./bathroom.html";
+        window.location.href = "./hallway.html";
     });
     
     hoverButton2.addEventListener('click', () => {

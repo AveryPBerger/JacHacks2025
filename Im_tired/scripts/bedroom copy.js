@@ -4,7 +4,7 @@ import { default as Action } from "./utility.js";
 import { default as Player } from "./player.js";
 import openPopupWindow from "./popupwindow.js";
 
-let player = null;
+//let player = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     // const possible_actions = [
@@ -84,4 +84,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-export { player };
+// export { player };
