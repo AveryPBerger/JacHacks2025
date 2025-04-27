@@ -1,0 +1,34 @@
+.fridge {
+    width: 150px;
+    height: 300px;
+    background: #e0f7fa;
+    border: 2px solid #000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .door {
+    flex: 1;
+    position: relative;
+    background: #b2ebf2;
+    border-bottom: 1px solid #000;
+  }
+  
+  .door.bottom {
+    background: #80deea;
+  }
+  
+  .handle {
+    width: 10px;
+    height: 40px;
+    background: #555;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+  }
+  
