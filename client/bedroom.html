@@ -33,7 +33,7 @@
         }
 
         .change-img-button {
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            /* background-color: rgba(0, 0, 0, 0.6); Semi-transparent background */
             color: transparent; /* Makes the text transparent */
             border: none;
             padding: 0.5rem 1rem;
@@ -43,7 +43,13 @@
         }
 
         .change-img-button:hover {
-            background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+            /* background-color: rgba(0, 0, 0, 0.8); Darker background on hover */
+            color: transparent; /* Makes the text transparent */
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
     </style>
 </head>
@@ -67,7 +73,7 @@
         const displayImage = document.getElementById('displayImage');
 
         button1.addEventListener('mouseover', () => {
-            displayImage.src = 'src/assets/bedroom/Bedanimation.png';
+            displayImage.src = 'src/assets/bedroom/DoorAnimation.png';
         });
 
         button1.addEventListener('mouseout', () => {
@@ -83,12 +89,14 @@
         });
 
         button3.addEventListener('mouseover', () => {
-            displayImage.src = 'src/assets/bedroom/DoorAnimation.png';
+            displayImage.src = 'src/assets/bedroom/Bedanimation.png';
         });
 
         button3.addEventListener('mouseout', () => {
             displayImage.src = 'src/assets/bedroom/Bedroom.png';
         });
+
+       
     </script>
 </body>
 </html>
