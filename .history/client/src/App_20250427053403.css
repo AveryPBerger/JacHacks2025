@@ -10,11 +10,6 @@ body {
     flex-direction: column;
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-
 header {
     background: linear-gradient(to right, #64b5f6, #42a5f5); /* Stronger blue gradient */
     color: white;
@@ -22,7 +17,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     border-bottom-left-radius: 0.5rem; /* Rounded bottom-left corner */
     border-bottom-right-radius: 0.5rem; /* Rounded bottom-right corner */
-    animation: slideDown 0.5s ease-out;
 }
 
 header .container {
@@ -175,16 +169,12 @@ main a:hover {
     border-radius: 0.5rem;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.transition-all {
-    transition: all 0.3s ease;
-  }
-
 #services .grid-container .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 #services .grid-container .card h3 {
@@ -310,20 +300,7 @@ footer .container {
     padding: 0 1rem;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-  
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
-}
-  
-  /* Animation delay classes */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
+
 
 @media (max-width: 768px) {
     header .container {
