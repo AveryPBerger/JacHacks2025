@@ -15,21 +15,6 @@ body {
     to { transform: translateY(0); }
 }
 
-
-.hero-fade-in {
-    opacity: 0;
-    animation: fadeIn 1.2s ease-in-out forwards;
-}
-
-.Game-info{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-}
-
-
-
 header {
     background: linear-gradient(to right, #64b5f6, #42a5f5); /* Stronger blue gradient */
     color: white;
@@ -120,7 +105,7 @@ main a:hover {
 }
 
 #about {
-    background-color: rgb(206, 235, 206); /* Very light blue */
+    background-color: #f0f4f8; /* Very light blue */
     padding: 4rem 0;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -161,7 +146,7 @@ main a:hover {
 }
 
 #services {
-    background: linear-gradient(to bottom, #cfdfe2, #f0f4f8);
+    background: linear-gradient(to bottom, #e0f7fa, #f0f4f8);
     padding: 4rem 0;
 }
 
