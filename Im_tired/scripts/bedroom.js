@@ -41,13 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             title: "Personal Computer Water Usage",
             content: "While at home desktops and laptops don't use as much power, they still require energy to run. The average desktop computer uses about 200-400 watts per hour, while laptops use about 50-100 watts.",
-            waterUsage: "????"
-        },
-        {
-            title: "Bed",
-            content: "Sleep.",
-            waterUsage: "None"
+            waterUsage: "TBD"
         }
+
     ];
     
     // Hover functionality
@@ -76,11 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     
     hoverButton2.addEventListener('click', () => {
-        openPopupWindow(buttonInfo[1]);
+        openPopupWindow(buttonInfo[0]);
     });
     
     hoverButton3.addEventListener('click', () => {
-        openPopupWindow(buttonInfo[2]);
+        openPopupWindow(buttonInfo[0]);
     });
 });
 
