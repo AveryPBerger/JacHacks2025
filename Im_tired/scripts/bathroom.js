@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             
             hoverButton3.addEventListener('click', () => {
-                window.location.href = "./bedroom.html";
+                window.location.href = "./hallway.html";
             });
         }
     }

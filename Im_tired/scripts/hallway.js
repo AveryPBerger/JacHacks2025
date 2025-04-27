@@ -65,12 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
         displayImage.src = images[2];
     });
 
-    hoverButton3.addEventListener('mouseover', () => {
+    hoverButton4.addEventListener('mouseover', () => {
         displayImage.src = images[3];
     });
     
     // Reset image on mouseout
-    [hoverButton1, hoverButton2, hoverButton3].forEach(button => {
+    [hoverButton1, hoverButton2, hoverButton3, hoverButton4].forEach(button => {
         button.addEventListener('mouseout', () => {
             displayImage.src = defaultImageSrc;
         });
